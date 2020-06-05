@@ -11,5 +11,8 @@ phases:
     commands:
       - '& "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" -p:FrameworkPathOverride="C:\Windows\Microsoft.NET\Framework\v4.0.30319" $env:SOLUTION'
       
-artifacts:  
-  base-directory: $CODEBUILD_SRC_DIR
+artifacts:
+  name: beta
+  base-directory: .\ChatApp
+  files:
+    - '**/*'
